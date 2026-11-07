@@ -36,6 +36,13 @@ target 'ExampleRN' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    # Current Xcode rejects the older deployment targets that some pods declare.
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+      end
+    end
   end
 
   pod 'GatewayPaySDK', :path => '../../../packages/pay-ios'

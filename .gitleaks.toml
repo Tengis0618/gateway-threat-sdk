@@ -5,5 +5,7 @@ useDefault = true
 
 # Third-party packages ship sample keys that would drown out real findings.
 [allowlist]
-description = "Third-party dependencies"
+description = "Third-party dependencies and the test idempotency key"
 paths = ['''(^|/)node_modules/''']
+# Fixture UUID used as an idempotency key in tests. It is not a credential.
+regexes = ['''6f8e0b6a-2e57-4d5f-8a5d-6c9b6b1a2f3e''']

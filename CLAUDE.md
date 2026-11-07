@@ -34,9 +34,7 @@ xcodebuild -scheme GatewayPaySDK -destination 'generic/platform=iOS Simulator' b
 
 Example apps need local setup (mkcert certificates, local gateway config, XcodeGen, signing), covered in Developer-Doc.md sections 9-11. `apps/example-ios/ExampleApp.xcodeproj` is generated: edit `project.yml` and re-run `xcodegen generate`.
 
-Currently failing:
-- `pnpm lint`: ESLint 9 finds no flat config, because `packages/core` has no `eslint.config.*` wiring in `tooling/eslint/index.js`. `core` is the only package with a `lint` script.
-- `example-rn` typecheck, which also stops `pnpm turbo run typecheck` with a non-zero exit: `types` in `packages/pay-react-native/package.json` has a leading slash (`/lib/typescript/...`).
+Currently failing: `pnpm lint`. ESLint 9 finds no flat config, because `packages/core` has no `eslint.config.*` wiring in `tooling/eslint/index.js`. `core` is the only package with a `lint` script.
 
 ## Architecture
 
