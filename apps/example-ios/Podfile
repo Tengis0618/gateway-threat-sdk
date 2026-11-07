@@ -1,0 +1,10 @@
+platform :ios, '15.0'
+use_frameworks!
+inhibit_all_warnings!
+
+workspace 'ExampleApp.xcworkspace'
+
+target 'ExampleApp' do
+  project 'ExampleApp.xcodeproj'
+  pod 'GatewayPaySDK', :path => '../../packages/pay-ios'
+end

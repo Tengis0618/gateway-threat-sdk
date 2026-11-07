@@ -1,0 +1,110 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gateway Pay — Web Demo</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                max-width: 640px;
+                margin: 48px auto;
+                padding: 0 24px;
+                color: #1a1a1a;
+            }
+            h1 {
+                margin-bottom: 8px;
+            }
+            #apple-pay {
+                background: black;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            #apple-pay:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+            #out {
+                background: #f3f3f3;
+                padding: 16px;
+                border-radius: 8px;
+                white-space: pre-wrap;
+                margin-top: 24px;
+                min-height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Gateway Pay demo</h1>
+        <p>Pay $9.99 via Apple Pay on a supported browser (Safari on iOS / macOS with a linked Apple Pay device).</p>
+        <button id="apple-pay">Pay with Apple Pay</button>
+        <pre id="out">Idle.</pre>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gateway Pay — Web Demo</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                max-width: 640px;
+                margin: 48px auto;
+                padding: 0 24px;
+                color: #1a1a1a;
+            }
+            h1 {
+                margin-bottom: 8px;
+            }
+            #apple-pay {
+                background: black;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            #apple-pay:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+            #out {
+                background: #f3f3f3;
+                padding: 16px;
+                border-radius: 8px;
+                white-space: pre-wrap;
+                margin-top: 24px;
+                min-height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Gateway Pay demo</h1>
+        <p>Pay $9.99 via Apple Pay on a supported browser (Safari on iOS / macOS with a linked Apple Pay device).</p>
+        <div id="apple-pay-container" style="min-height: 44px; margin: 12px 0;"></div>
+        <pre id="out">Idle.</pre>
+
+        <style>
+            apple-pay-button {
+                --apple-pay-button-width: 220px;
+                --apple-pay-button-height: 44px;
+                --apple-pay-button-border-radius: 8px;
+                --apple-pay-button-padding: 0;
+                display: inline-block;
+            }
+        </style>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
+

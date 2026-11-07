@@ -1,0 +1,10 @@
+{
+    "extends": "../../tooling/tsconfig/library.json",
+    "compilerOptions": {
+        "jsx": "react-native",
+        "lib": ["ES2020", "DOM"],
+        "types": ["jest"]
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["lib", "node_modules"]
+}

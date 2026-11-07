@@ -1,0 +1,59 @@
+# XcodeGen spec — run xcodegen generate in this folder to create ExampleApp.xcodeproj.
+
+# The project compiles the sources in ./ExampleApp in place and links GatewayPaySDK from
+
+# ../../packages/pay-ios as a local Swift package, so edits to either show up on the next build.
+
+name: ExampleApp
+
+options:
+
+  deploymentTarget:
+
+    iOS: "15.0"
+
+packages:
+
+  GatewayPaySDK:
+
+    path: ../../packages/pay-ios
+
+targets:
+
+  ExampleApp:
+
+    type: application
+
+    platform: iOS
+
+    sources:
+
+      - path: ExampleApp
+
+    dependencies:
+
+      - package: GatewayPaySDK
+
+    configFiles:
+
+      Debug: Secrets.xcconfig
+
+      Release: Secrets.xcconfig
+
+    settings:
+
+      base:
+
+        PRODUCT_BUNDLE_IDENTIFIER: $(GATEWAY_BUNDLE_ID) # set in Secrets.xcconfig
+
+        DEVELOPMENT_TEAM: $(GATEWAY_DEVELOPMENT_TEAM) # set in Secrets.xcconfig
+
+        CODE_SIGN_STYLE: Automatic
+
+        INFOPLIST_FILE: ExampleApp/Info.plist
+
+        CODE_SIGN_ENTITLEMENTS: ExampleApp/ExampleApp.entitlements
+
+        SWIFT_VERSION: "5.9"
+
+        TARGETED_DEVICE_FAMILY: "1"

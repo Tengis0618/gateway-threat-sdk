@@ -1,0 +1,11 @@
+{
+    "extends": "../../tooling/tsconfig/react-native.json",
+    "compilerOptions": {
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "lib": ["ES2020"],
+        "types": ["react-native"],
+        "moduleResolution": "bundler"
+    },
+    "include": ["App.tsx", "index.js", "*.ts", "*.tsx"]
+}

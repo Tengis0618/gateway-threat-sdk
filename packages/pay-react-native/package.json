@@ -1,0 +1,46 @@
+{
+    "name": "@gateway/pay-react-native",
+    "version": "1.0.0",
+    "license": "Apache-2.0",
+    "source": "./src/index.ts",
+    "main": "./lib/commonjs/index.js",
+    "module": "./lib/module/index.js",
+    "types": "/lib/typescript/src/index.d.ts",
+    "react-native": "src/index.ts",
+    "files": [
+        "src", "lib", "ios", "android",
+        "GatewayPayReactNative.podspec", "!**/__tests__"
+    ],
+    "scripts": {
+        "build": "bob build",
+        "typecheck": "tsc --noEmit",
+        "test": "jest",
+        "clean": "rm -rf lib"
+    },
+    "peerDependencies": {
+        "react": "*",
+        "react-native": "*"
+    },
+    "dependencies": {
+        "@gateway/pay-core": "workspace:*"
+    },
+    "devDependencies": {
+        "react-native-builder-bob": "^0.30.0",
+        "typescript": "^5.5.4",
+        "jest": "^29.7.0",
+        "react": "^18.3.1",
+        "react-native": "^0.75.2",
+        "@react-native/babel-preset": "0.75.2",
+        "@types/react": "^18.3.3",
+        "@types/jest": "^29.5.12"
+    },
+    "react-native-builder-bob": {
+        "source": "src",
+        "output": "lib",
+        "targets": [
+            ["commonjs", {"esm": true}],
+            ["module", {"esm": true}],
+            "typescript"
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "gateway-pay-sdk",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20.10.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format":  "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\""
+  },
+  "devDependencies": {
+    "turbo": "^2.9.14",
+    "typescript": "^5.5.4",
+    "prettier": "^3.3.3",
+    "@changesets/cli": "^2.27.7",
+    "eslint": "^9.10.0"
+  }
+}

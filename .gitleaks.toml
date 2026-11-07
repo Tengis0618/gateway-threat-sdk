@@ -1,0 +1,9 @@
+title = "Gateway Pay SDK"
+
+[extend]
+useDefault = true
+
+# Third-party packages ship sample keys that would drown out real findings.
+[allowlist]
+description = "Third-party dependencies"
+paths = ['''(^|/)node_modules/''']

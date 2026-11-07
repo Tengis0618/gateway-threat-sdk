@@ -1,0 +1,26 @@
+{
+    "name": "example-rn",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node scripts/generate-env.js && react-native start",
+        "ios": "node scripts/generate-env.js && react-native run-ios",
+        "typecheck": "node scripts/generate-env.js && tsc --noEmit"
+    },
+    "dependencies": {
+        "@gateway/pay-react-native": "workspace:*",
+        "react": "18.3.1",
+        "react-native": "0.75.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.24.0",
+        "@babel/preset-env": "^7.24.0",
+        "@babel/runtime": "^7.24.0",
+        "@react-native-community/cli": "^20.2.0",
+        "@react-native/babel-preset": "0.75.2",
+        "@react-native/metro-config": "0.75.2",
+        "@react-native/typescript-config": "0.75.2",
+        "@types/react": "^18.3.3",
+        "typescript": "^5.5.4"
+    }
+}
